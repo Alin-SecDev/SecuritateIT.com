@@ -1,0 +1,15 @@
+Comenzi GitHub
+
+Initial commit
+Open git bash inside the folder you want to commit
+git init
+git add .
+git commit -m "initial commit"
+git branch -M main
+git remote add origin https://github.com/Alin-SecDev/name of the project.git
+git push -u origin main
+
+update the githib repo:
+git add .
+git commit -m "your comment about the update on repo"
+git push
