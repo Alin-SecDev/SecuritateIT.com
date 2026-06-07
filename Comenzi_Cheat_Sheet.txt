@@ -15,3 +15,4 @@ git commit -m "your comment about the update on repo"
 git push
 
 At the end of each day must push to the repo all the work that I have done. Make this into a habit. 
+Be very careful when adding the commit message to be concise and specific about the update and if possible commit after the modification or updating a single file. This is how you keep track of the work that you done. 
