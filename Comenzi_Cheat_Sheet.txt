@@ -6,10 +6,12 @@ git init
 git add .
 git commit -m "initial commit"
 git branch -M main
-git remote add origin https://github.com/Alin-SecDev/name of the project.git
+git remote add origin https://github.com/Alin-SecDev/name_of_the_project.git
 git push -u origin main
 
-update the githib repo:
+update the GitHub repo:
 git add .
 git commit -m "your comment about the update on repo"
 git push
+
+At the end of each day must push to the repo all the work that I have done. Make this into a habit. 
