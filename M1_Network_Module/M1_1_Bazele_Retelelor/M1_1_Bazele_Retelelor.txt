@@ -1,0 +1,12 @@
+The internet was created in 1969 with the purpose to connect the universities around USA. It was called DARPA
+As today, June 2026 there are ~6 billion people that use the internet and ~21 billion internet connected devices. 
+
+What is internet? 
+Internet is a network of networks. This creates a global infrastructure that allows information to travel, on demand, from one place to another.   
+
+The internet has a basics model that it is called tcp/ip
+
+The internet is made of:
+end devices -> pc's, laptops, smartphones, IOT. This means that the end devices are the terminals where the information starts or it ends or both
+servers -> this provides the internet experience as we know
+intermediary devices -> routers, switches, ap, firewall. This are the devices that connects the end devices with the servers. 
