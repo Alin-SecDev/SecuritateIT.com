@@ -20,3 +20,17 @@ DNS - stands for Domain Name System. It translates a human-readable website like
 
 OSI - Open Systems Interconnection model is a conceptual framework created by the ISO that standardize how computer systems communicate over a network.
 
+OSI is based on 7 layers. 
+1 Physical - raw bits in different mediums like copper wire, optical fiber cable or radio signals(wifi)
+2 Datalink - transfers data between devices using MAC address
+3 Network - Routes data between different networks using ip addresses
+4 Transport - provides end-to-end communication between apps using segmentation(TCP) and error checking
+5 Session - Establishes, manages and terminates communication between applications
+6 Presentation - Translate, encrypt and compresses data and ensures the data is correctly transmitted and received
+6 Application - provide network services to user applications
+
+More details about OSI model in Cheat_Sheet_SecuritateIT.xlsx
+
+
+Network traffic with Wireshark
+we can scan the network traffic, see the protocols, and how packages are sent and received overt the network and internet
