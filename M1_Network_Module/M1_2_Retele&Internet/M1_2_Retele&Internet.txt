@@ -1,0 +1,22 @@
+Install Fing
+
+Scan the network while connected to a WIFI network with your phone and see all the devices present in that network. 
+Already did that on previous training and because now I am not connected to a WIFI network I don't have what to note down. 
+
+Use whatsmyipaddress.com to check your public IP address. At this moment my IP IPv4 address is 185.53.198.16
+Again: 
+192.168.x.x private IP address
+172.16.x.x private IP address
+10.x.x.x private IP address
+
+Wireless Routers
+This devices are incorporating 3 things.
+They are a wireless network
+They are also A switch 
+And as the name implies they are a router(connects more networks) 
+
+DNS - stands for Domain Name System. It translates a human-readable website like facebook.com int a numerical IP address like 185.60.218.35(Facebook IP address) 
+
+
+OSI - Open Systems Interconnection model is a conceptual framework created by the ISO that standardize how computer systems communicate over a network.
+
