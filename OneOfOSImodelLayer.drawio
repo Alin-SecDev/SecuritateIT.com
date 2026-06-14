@@ -1,0 +1,109 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
+  <diagram name="Page-1" id="Scksr182fUAp5iaN2mWC">
+    <mxGraphModel dx="2102" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_SdDbzsIVR2307orozfV-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="_SdDbzsIVR2307orozfV-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="225" y="230" as="sourcePoint" />
+            <mxPoint x="625" y="550" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="110" y="230" />
+              <mxPoint x="110" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_SdDbzsIVR2307orozfV-15" target="_SdDbzsIVR2307orozfV-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="230" />
+              <mxPoint x="310" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_SdDbzsIVR2307orozfV-2" target="_SdDbzsIVR2307orozfV-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="230" />
+              <mxPoint x="430" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-2" value="Client" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="190" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-3" value="Server" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="590" y="190" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_SdDbzsIVR2307orozfV-4" target="_SdDbzsIVR2307orozfV-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-4" value="Config" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-5" value="Mail" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_SdDbzsIVR2307orozfV-6" target="_SdDbzsIVR2307orozfV-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="550" />
+              <mxPoint x="850" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-6" value="Web" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-9" value="Source&lt;br&gt;Port - Random generated&lt;br&gt;IP client" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="260" y="190" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-10" value="Package" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="480" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-11" value="Destination&lt;br&gt;port 80&lt;br&gt;IP dest" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="150" y="470" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-13" value="This will acces the http app of the server" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="850" y="510" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-18" value="Destination&lt;br&gt;port 25&lt;br&gt;IP dest" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="385" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="_SdDbzsIVR2307orozfV-5" target="_SdDbzsIVR2307orozfV-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="450" />
+              <mxPoint x="800" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-21" value="This will acces email app of the server" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="710" y="470" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-26" value="Package" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="230" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-27" value="Destination&lt;br&gt;port 22&lt;div&gt;ip dest&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="245" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-29" value="This will acces the config of the server" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="690" y="315" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-31" value="Source&lt;br&gt;Port - Random generated&lt;br&gt;IP client" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="495" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-32" value="Source&lt;br&gt;Port - Random generated&lt;br&gt;IP client" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="380" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-15" value="Package" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="370" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_SdDbzsIVR2307orozfV-37" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;One of OSI model Layer&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="40" width="250" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
