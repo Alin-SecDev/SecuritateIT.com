@@ -72,7 +72,7 @@ interface Gig0/1
 ip address 89.12.0.1 255.255.255.0
 ip route 89.12.0.0 255.255.255.0 172.16.0.0
 
-I am stuck at this step. I will continue tomorrow 
+I am stuck at this step. I will continue tomorrow M1
  
 
 
