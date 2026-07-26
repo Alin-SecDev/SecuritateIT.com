@@ -1,0 +1,78 @@
+Lab 1 
+We have two network blue and red and we must connect them trough 2 routers to communicate from one to another. 
+The template of the network is provide. 
+
+First task is to cable the components of the two LAN's and one WAN
+
+Second task is to assign the ip addresses for the routers and pc
+Red ip domain is: 172.16.0.0/24
+Green ip domain is: 89.12.0.0/24
+Blue ip domain is: 192.168.0.0/24
+
+Third task is to set hostname and enable passwords. 
+
+I completed the first task by dragging the cables 
+
+For the second task:
+I will start with the red network with the router RED 1
+
+enable
+configure terminal
+hostname RED1
+enable password admin
+interface Gig0/0
+ip address 172.16.0.1 255.255.255.0
+no shutdown
+do show ip interface brief
+end
+exit
+
+RED_PC1
+On IP Configuration we set:
+
+IPv4 Address 172.16.0.2
+Subnet Mask 255.255.255.0
+Default Gateway 172.16.0.1
+
+RED_PC2
+IPv4 Address 172.16.0.3
+Subnet Mask 255.255.255.0
+Default Gateway 172.16.0.1
+
+Now we test the ping to the router and between the pc's on the RED network
+
+Now we will configure the BLUE network
+enable
+configure terminal
+hostname BLUE1
+enable password admin
+interface Gig0/1
+ip address 192.168.0.1 255.255.255.0
+no shutdown
+do show ip interface brief
+end
+exit
+
+BLUE_PC1
+IPv4 Address 192.168.0.2
+Subnet Mask 255.255.255.0
+Default Gateway 192.168.0.1
+
+BLUE_PC2
+IPv4 Address 192.168.0.3
+Subnet Mask 255.255.255.0
+Default Gateway 192.168.0.1
+
+Now I will set the routers green network and ip route
+RED1
+enable
+admin
+configure terminal
+interface Gig0/1
+ip address 89.12.0.1 255.255.255.0
+ip route 89.12.0.0 255.255.255.0 172.16.0.0
+
+I am stuck at this step. I will continue tomorrow 
+ 
+
+

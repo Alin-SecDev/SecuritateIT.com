@@ -34,3 +34,5 @@ More details about OSI model in Cheat_Sheet_SecuritateIT.xlsx
 
 Network traffic with Wireshark
 we can scan the network traffic, see the protocols, and how packages are sent and received overt the network and internet
+
+ARP - Address Resolution Protocol. This maps an IP address to a MAC address. It lets a device find the destination device's MAC address so it can send data within the same LAN
