@@ -1,4 +1,18 @@
 Lab 1 
+
+Obiective:
+
+0) Cablati echipamentele
+
+1) Setati adrese IP pe Routere, Switch-uri si PC-uri
+
+RED: 172.16.0.0/24
+GREEN: 89.12.0.0/24
+BLUE: 192.168.0.0/24
+
+2) Setati Hostname, Parole de Enable
+
+
 We have two network blue and red and we must connect them trough 2 routers to communicate from one to another. 
 The template of the network is provide. 
 
@@ -63,16 +77,42 @@ IPv4 Address 192.168.0.3
 Subnet Mask 255.255.255.0
 Default Gateway 192.168.0.1
 
-Now I will set the routers green network and ip route
+Now I will set the routers green network and ip 
 RED1
 enable
 admin
 configure terminal
 interface Gig0/1
 ip address 89.12.0.1 255.255.255.0
-ip route 89.12.0.0 255.255.255.0 172.16.0.0
+no shutdown 
+end
 
-I am stuck at this step. I will continue tomorrow M1
+BLUE1
+enable admin
+configure terminal
+interface Gig0/0
+ip address 89.12.0.2 255.255.255.0
+no shutdown 
+end
+
+
+
+IP route for router RED1
+enable
+admin
+configure terminal
+ip route 192.168.0.0 255.255.255.0 89.12.0.2
+end
+
+IP route for router BLUE1
+enable
+admin
+configure terminal
+ip route 172.16.0.0 255.255.255.0 89.12.0.1
+end
+
+
+
  
 
 

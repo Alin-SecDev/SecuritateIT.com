@@ -1,0 +1,231 @@
+OBIECTIV: Familiarizarea cu Rutele Statice si asigurarea
+conectivitatii end-to-end
+
+0) Cablati echipamentele
+
+1) Setati adrese IP pe Routere, Switch-uri si PC-uri
+
+
+GREEN: RED1-BLUE1: 89.12.0.0/24
+GREEN: RED1-YELLOW1: 89.13.0.0/24
+GREEN: YELLOW1-BLUE1: 89.32.0.0/24
+
+
+RED: 172.16.0.0/24
+BLUE: 192.168.0.0/24
+YELLOW: 10.8.8.0/24
+
+IP Server DNS: 10.8.8.8
+IP Server HTTP: 10.8.8.9
+IP Router YELLOW1: 10.8.8.1
+
+2) Setati Hostname, Parole de Enable, Bannere
+
+3) Configurati Telnet pe Routerul BLUE1
+
+4) Configurati SSH pe Routerele YELLOW1 si RED1
+
+5) Setati Rute Statice intre Retele
+
+6) Accesati din Browser-ul fiecarui PC:
+
+http://www.google.ro
+https://www.facebook.ro/
+
+
+Step 0 - wiring the equipment. Done - wired by using the Automatically Chose Connection Type
+
+Step 1 and step 2 done in the same run
+Set IP address on each color
+Red network is: 172.16.0.0/24
+Blue network is: 192.168.0.0
+Yellow network is 10.8.8.0/24
+
+RED NETWORK 172.16.0.0/24
+
+RED1 172.16.0.1
+enable
+configure terminal
+hostname RED1
+enable password admin
+banner motd "Access denied for unauthorized users"
+interface Gig0/0
+ip address 172.16.0.1 255.255.255.0
+no shutdown
+exit
+exit 
+show ip interface brief
+
+RED_SW1 172.16.0.10
+enable
+configure terminal
+hostname RED_SW1
+enable password admin
+banner motd "Access denied for unauthorized users"
+interface vlan 1
+ip address 172.16.0.2 255.255.255.0
+no shutdown
+exit
+ip default-gateway 172.16.0.1
+
+RED_PC1 172.16.0.10
+RED_PC2 172.16.0.11
+
+
+BLUE NETWORK 192.168.0.0/24
+
+BLUE1 192.168.0.1
+enable
+configure terminal
+hostname BLUE1
+enable password admin
+banner motd "Access denied for unauthorized users"
+interface Gig0/0
+ip address 192.168.0.1 255.255.255.0
+no shutdown 
+exit
+exit
+show ip interface brief
+
+BLUE_SW1 192.168.0.2
+enable
+configure terminal
+hostname BLUE_SW1
+enable password admin
+banner motd "Access denied for unauthorized users"
+interface vlan 1
+ip address 192.168.0.2 255.255.255.0
+no shutdown
+exit
+ip default-gateway 192.168.0.1
+
+BLUE_PC1 192.168.0.10
+BLUE_PC2 192.168.0.11
+
+YELLOW NETWORK 10.8.8.0/24
+
+YELLOW1 10.8.8.1
+enable
+configure terminal
+hostname YELLOW1
+enable password admin
+banner motd "Access denied for unauthorized users"
+interface Gig0/0
+ip address 10.8.8.1 255.255.255.0
+no shutdown
+exit
+exit
+show ip interface brief
+
+YELLOW_SW1
+enable
+configure terminal
+hostname YELOW_SW1
+enable password admin
+banner motd "Access denied for unauthorized user"
+interface vlan 1
+ip address 10.8.8.2 255.255.255.0
+no shutdown
+exit
+ip default-gateway 10.8.8.1
+
+YELLOW Server DNS 10.8.8.8
+YELLOW Server HTTP 10.8.8.9
+
+Step 3 Configure telnet on router BLUE1
+enable
+admin
+configure terminal
+line vty 0 4
+password cisco
+login
+
+Step 4 Configure SSH on Routers YELLOW1 and RED1
+YELLOW1
+enable
+admin
+configure terminal
+username admin password admin
+ip domain-name learn_network
+crypto key generate rsa
+1024
+ip ssh version 2
+line vty 0 4
+login local
+transport input ssh
+
+RED1 repeat the same steps as in YELLOW1
+
+
+Step 5 Add static routing between networks. 
+RED1 - BLUE1 will be 89.12.0.0/24
+RED1 - YELLOW1 will be 89.13.0.0/24
+YELLOW1 - BLUE1 will be 89.32.0.0/24
+
+
+BLUE1 
+enable
+admin
+configure terminal
+interface Gig0/2 
+ip address 89.12.0.1 255.255.255.0
+no shutdown
+exit
+interface Gig0/1
+ip address 89.32.0.1 255.255.255.0
+no shutdown
+exit
+exit
+show ip interface brief
+configure terminal
+ip route 172.16.0.0 255.255.255.0 89.12.0.2
+ip route 10.8.8.0 255.255.255.0 89.32.0.2
+
+YELLOW1
+enable
+admin
+configure terminal
+interface gig0/2
+ip address 89.32.0.2 255.255.255.0
+no shutdown
+exit
+interface Gig0/1
+ip address 89.13.0.1 255.255.255.0
+no shutdown 
+exit
+exit
+show ip interface brief
+configure terminal
+ip route 192.168.0.0 255.255.255.0 89.32.0.1
+ip route 172.16.0.0 255.255.255.0 89.13.0.2
+
+RED1
+enable
+admin
+configure terminal
+interface Gig0/1
+ip address 89.13.0.2 255.255.255.0
+no shutdown
+exit
+interface Gig0/2
+ip address 89.12.0.2 255.255.255.0
+no shutdown
+exit
+exit
+show ip interface brief
+configure terminal
+ip route 10.8.8.0 255.255.255.0 89.13.0.1
+ip route 192.168.0.0 255.255.255.0 89.12.0.1
+
+
+
+
+
+
+
+
+
+
+
+
+

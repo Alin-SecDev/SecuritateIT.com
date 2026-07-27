@@ -58,12 +58,12 @@ no shutdown
 
 
 After the configuration of routers we need to configure the ip route. 
-on Router 0
-enable
-configure terminal
-ip route 192.168.1.0 255.255.255.0 192.168.2.1      This means that we are telling the router that information will go to the network 192.168.1.0 trough the 192.168.2.1 or something like the Gig0/1 connection will route to Gig0/0 connection. 
-
 on Router 1
 enable
 configure terminal
-ip route 10.0.0.0 255.0.0.0 192.168.2.2      Same as the Router we are telling the router that information will go to the network 10.0.0.0 trough the 192.168.2.2 
+ip route 192.168.1.0 255.255.255.0 192.168.2.1    This means that we are telling router 1 that the   network 192.168.0.0 will go trough 192.168.2.1 which is Gig0/1 port on router 0 
+
+on Router 0
+enable
+configure terminal
+ip route 10.0.0.0 255.0.0.0 192.168.2.2     This means that we are telling router 0 that the network 10.0.0.0 will go trough 192.168.2.2 which is Gig0/0 on router 1
