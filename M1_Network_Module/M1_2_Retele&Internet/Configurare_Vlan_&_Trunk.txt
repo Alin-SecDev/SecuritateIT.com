@@ -1,0 +1,130 @@
+VLAN Virtual Local Area Network
+
+A logical network that splits physical network into multiple isolated networks, allowing devices to communicate as if they were on separate switches. 
+
+So a Switch with 10 ports can be split into 5 VLAN's with 2 ports for each one of the VLAN's with devices on each VLAN can communicate directly and devices on different VLAN's cannot communicate unless you configure inter-VLAN routing. 
+
+VLAN 10 ports 1-2
+VLAN 20 ports 3-4
+VLAN 30 ports 5-6
+VLAN 40 ports 7-8
+VLAN 50 ports 9-10
+
+
+For our example we will define a production and financial VLANs 
+
+VLAN 10 production 192.168.10.0/24
+VLAN 20 Financial 192.168.20.0/24
+
+Steps for configuring
+1. define and implement IP addresses on PCs
+2. Create VLANs on switches
+3. Add PC's according to their VLANs
+4. Create Trunk connection between switches
+
+Step 1 define and implement pc's IPs 
+
+PC1_FIN 
+192.168.20.2
+255.255.255.0
+192.168.20.1
+8.8.8.8
+
+PC2_FIN
+192.168.20.3
+255.255.255.0
+192.168.20.1
+8.8.8.8
+
+PC1_PROD
+192.168.10.2
+255.255.255.0
+192.168.10.1
+8.8.8.8
+
+PC2_PROD
+192.168.10.3
+255.255.255.0
+192.168.10.1
+8.8.8.8
+
+Step 2 Create VLAN's on switches 
+
+Switch0
+enable
+configure terminal
+vlan ?
+10
+name PROD 
+end
+show vlan  - this will display the VLANs 
+configure terminal
+vlan 20
+name FIN
+end
+show vlan
+
+Switch1
+enable
+configure terminal
+vlan 10
+name PROD
+exit
+vlan 20
+name FIN
+end
+show vlan
+
+
+Step 3 Add pc's according to VLA
+
+On Switch0 
+enable 
+configure terminal
+interface fa0/1  - this is for PC1_FIN
+switchport mode access
+switchport access vlan 20 
+exit
+interface fa0/2
+switchport mode access
+switchport access vlan 10
+end
+show vlan
+
+On Switch1
+enable
+configure terminal
+interface fa0/1  - this is for PC1_FIN
+switchport mode access
+switchport access vlan 20 
+exit
+interface fa0/2
+switchport mode access
+switchport access vlan 10
+end
+show vlan
+
+Step 4 Create Trunk Connection Between Switches 
+
+Switch0
+enable
+show interfaces trunk    - if there is no trunk configured it will display nothing regarding trunk 
+configure terminal
+interface gig0/1
+switchport mode trunk   - not dynamic because of the risks of vlan hopping with Kali Linux.
+"after the interface resets"
+switchport trunk allowed vlan 10,20
+
+
+Switch1
+enable
+configure terminal
+interface gig0/1
+switchport mode trunk
+switchport trunk allowed vlan 10,20
+
+
+
+
+
+
