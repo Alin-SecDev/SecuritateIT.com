@@ -1,0 +1,8 @@
+DHCP
+
+Dynamic Host Control Protocol  
+
+The given IP to an end device is done in two ways. 
+
+Static - manually writing the ip, subnet, default gateway and DNS 
+Dynamically with DHCP 
