@@ -1,0 +1,12 @@
+NAT
+
+Network Address Translation
+
+Translates private IP addresses into public IP addresses allowing devices on a LAN to communicate with internet. 
+
+Example: 
+192.168.0.10 -> NAT Router -> 86.120.50.20 -> Internet. 
+
+It allows many devices to share one public IP address. 
+
+The router manages to create an public IP from a private IP that wants to access the Internet. 

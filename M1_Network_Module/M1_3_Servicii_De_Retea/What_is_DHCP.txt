@@ -5,4 +5,20 @@ Dynamic Host Control Protocol
 The given IP to an end device is done in two ways. 
 
 Static - manually writing the ip, subnet, default gateway and DNS 
-Dynamically with DHCP 
+
+Dynamically with DHCP
+
+In CPT on a wireless router use DHCP setting
+
+On DHCP Server modify the range of IPs to start from 192.168.0.100 to 192.168.0.5 with 10 allowed addresses. 
+
+Static DNS use 8.8.8.8 which is a Google DNS
+
+Now add a switch and a PC and set the pc to DHCP IP.
+
+!!! On servers, switches, routers do not allow DHCP IP allocation. 
+
+!!! Do not have more than one DHCP server on the same network
+
+
+

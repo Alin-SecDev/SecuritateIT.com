@@ -1,0 +1,3 @@
+Servers in CPT
+
+For home users the Wi-Fi router is also DHCP

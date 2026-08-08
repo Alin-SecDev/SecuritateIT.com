@@ -1,0 +1,11 @@
+What is DNS and 8.8.8.8
+
+DNS - Domain Name Service - Think of the DNS as the phonebook of the Internet. You provide a name and DNS finds the corresponding address. 
+
+The most common DNS are:
+8.8.8.8 or 8.8.4.4 this is from Google. 
+1.1.1.1 or 1.0.0.1 this is from Cloudflare.
+9.9.9.9 or 149.112.112.112 this is from Quad9
+
+
+
