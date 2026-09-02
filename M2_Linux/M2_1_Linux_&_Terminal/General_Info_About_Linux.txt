@@ -1,0 +1,86 @@
+Linux, Servers, Cloud. 
+
+
+Linux is an operating system OS. 
+In a more in-depth meaning the Linux Kernel is the software that makes hardware and application work together.  
+Linux is an open source system. 
+
+The most common distro is:
+User = Ubuntu, Mint, Debian, 
+Security = Kali Linux and Parrot OS
+Server = CentOS, RedHat, Fedora
+
+GUI vs CLI
+
+On cloud you can have a very basic server server that has minimum resources like 1gb of RAM and a few GB of storage and as OS we can use a Linux distro like CentOS with no Graphical Interface. 
+
+
+CLI in Kali Linux 
+
+ctrl + alt + t shortcut to open terminal. 
+
+Common or important commands and why and when to use them
+ls - list files/directories - check what are the content of the current directory
+ls -l displays a long listing format and detailed information about files
+cd - change directory -  move from one directory to another
+pwd - show current directory 
+mkdir - create a directory
+rm - remove files/directories
+cp - copy files/directories
+mv - move or rename files
+cat - display file contents
+grep - search text for a pattern
+find - find files/directories
+chmod - change file permissions
+chown - change file owner
+ip addr - show/manage IP addresses
+ip route - show/manage routing table
+ping - test connectivity 
+ssh - connect securely to remote system
+systemctl - manage system services
+ps - show running processes
+kill - send signal to a process
+sudo - run command with elevated privileges
+sudo apt update - check for available update
+sudp apt upgrade - update the packages
+sudo apt install <package> - install a specific package or app
+sudo apt remove <package> - remove a specific package or app
+
+Now a few examples commands 
+navigate trough directories. 
+ls - will display the directory content
+cd Desktop - will change where you are
+pwd  - displays the place you are in case you are not unsure of where you are.
+cd .. - goes back to one directory
+ls kali/Desktop/ - displays the content of directory Desktop regarding the directory you are in. 
+clear - if you want a cleaner terminal after you write a few commands 
+touch name_of_file.txt to create a txt file inside a directory
+touch Test_File.txt
+And one awesome thing is that I can create a file in a specific location with out being in that directory
+from home directory touch Desktop/Test_Folder/file.txt to create the file
+from home directory nano Desktop/Test_Folder/file.txt to write in the file
+from home directory cat Desktop/Test_Folder/file.txt to display the contend of the file
+
+if to deep in directories use cd ~ to go directly to home
+
+rm fisier.txt and will delete a specific file. 
+mv file.txt new_folder/ - this will move a file into another folder. 
+to rename a folder use mv new_folder/ another_name this will rename the new_folder. !!! if there is a folder with the name another_folder the mv command will move the new_folder inside the another_folder. 
+
+rm -rf to delete a directory.
+
+echo text for file > file.txt this will add the text directly into the file but if I use the same command for another text to insert in the same file will over write the original text
+To add the text at the end of the file use: echo text for file >> file.txt
+
+to use a text editor you can use nano or vim. 
+vim is more used and preferred by professionals
+
+vim file.txt to open the file
+i to start write in the file
+escape to stop writing in the file
+:w to save the file
+:q to exit the file
+:wq to save and exit the file. 
+In case of unnecessary text inserted and not wish to save just use :q! and the file will exit without saving the last text inserted
+
+ 
