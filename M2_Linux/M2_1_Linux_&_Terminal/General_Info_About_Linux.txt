@@ -83,4 +83,8 @@ escape to stop writing in the file
 :wq to save and exit the file. 
 In case of unnecessary text inserted and not wish to save just use :q! and the file will exit without saving the last text inserted
 
+
+
+
+
  
